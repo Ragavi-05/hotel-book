@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOOKING 🏢</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      color: #001b74;
+    }
+    #logo {
+      width: 70px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 10px 0px 10px;
+      background-color: #306dae76;
+      backdrop-filter: blur(10px);
+      height: 10vh;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 7px;
+    }
+    .btn {
+      padding: 7px 10px 7px 10px;
+      background-color: #000000;
+      border-radius: 3px 10px;
+      text-decoration: none;
+      color: aliceblue;
+      padding: 10px 15px;
+    }
+    .body {
+      height: 100vh;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      position: relative;
+    }
+    .cont-1 {
+      border-width: 2px;
+      border-style: solid;
+      border-radius: 7px;
+      border-color: black;
+      padding: 5px 10px;
+      display:flex;
+      gap: 5px;
+      text-align: center;
+      justify-content: center;
+    }
+    .cont-2 {
+      font-weight: 900;
+      font-size: 40px;
+      text-align: center;
+      /* font-size: xx-large; */
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+    .cont-3{
+        font-size:large;
+        font-weight: 40px;
+    }
+    .options{
+        max-width:80vw ;
+        padding: 10px;
+        border-radius: 7px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content:space-around;
+        flex-wrap: wrap;
+        gap:8px;
+        
+    }
+    .container{
+        background-color: rgb(255, 255, 255);
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        border-radius: 7px;
+        border: #c1c1c1;
+        /* box-sizing: 0.5px; */
+        /* border-style: solid; */
+        box-shadow: 0 4px 8px 0 rgba(131, 131, 131, 0.436), 0 6px 20px 0 rgba(196, 196, 196, 0.596);
+    }
+    #image{
+        border-radius: 7px;
+    }
+    .location{
+        font-size: larger;
+        margin: 10px 0px;
+    }
+    .contact-number{
+        font-size:large;
+        font-weight: 100;
+        margin: ;
+    }
+    .btn-location{
+        border-style: solid;
+        text-align: center;
+        box-sizing: 2px;
+        padding: 10px;
+        border-radius: 7px;
+        cursor:url("./noun-cursor-2062720.svg"), auto;
+    }
+    .btn-location:hover{
+        border: none;
+        background-color: #dbdbdb;
+        /* transition-delay:4s; */
+    }
+    .contact-email{
+        font-size:large;
+        font-weight: 200;
+    }
+    th{
+        color: rgb(255, 255, 255);
+    }
+    .gray-cover{
+        width: 100%;
+        height: 50%;
+        position:absolute;
+        background-color: #bcbcbc;
+        bottom: 0;
+        border-radius: 0px 0px 10px 10px;
+    }
+    .elements{
+        max-width:80vw ;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content:space-around;
+        flex-wrap: wrap;
+        gap:8px;
+        z-index: 1;
+    }
+  </style>
+  <body>
+    <section class="header">
+      <img id="logo" src="logo image.png" />
+
+      <div class="nav-links">
+        <a class="btn" href="index.html">Home</a>
+        <a href="#" class="btn">About Us</a>
+        <a href="#" class="btn">Contact Us</a>
+        <a href="#" class="btn">Blog</a>
+      </div>
+    </section>
+
+    <section class="body">
+      <div class="cont-1">
+        <img src="./icon.svg" alt="" width="20px" srcset="" />
+        <div>Contact Page</div>
+      </div>
+      <div class="cont-2">Get in Touch with us for more information</div>
+      <div
+      class="cont-3">if you need help or have a question , we are here for you</div>
+      <div class="options">
+       
+
+      <div class="options">
+        
+        <div
+        
+        class="elements">
+            <div class="container">
+                <img src="./pic 2.jpg" width="300px" sizes="" srcset="" id="image" />
+                <div class="location">Paris</div>
+                <hr>
+                <div class="contact-email">lakfjlkj@gmail.com</div>
+                <div class="contact-number">(415)931-1616</div>
+                <a href="location.html"><div class="btn-location">View Location</div></a>
+              </div>
+              
+              <div class="container">
+                  <img src="./pic4.jpg" width="300px" sizes="" srcset="" id="image" />
+                  <div class="location">Dubai</div>
+                  <hr>
+                  <div class="contact-email">lakfjlkj@gmail.com</div>
+                  <div class="contact-number">(415)931-1616</div>
+                  <div class="btn-location">View Location</div>
+                </div>
+      
+                <div class="container">
+                  <img src="./pic3.jpeg" width="300px" sizes="" srcset="" id="image" />
+                  <div class="location"></div>
+                  <hr>
+                  <div class="contact-email">lakfjlkj@gmail.com</div>
+                  <div class="contact-number">(415)931-1616</div>
+                  <div class="btn-location">View Location</div>
+                </div>
+        </div>
+        <div 
+        class="gray-cover">
+        </div>
+        
+      </div>
+      
+    </section>
+  </body>
+</html>
