@@ -1,217 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BOOKING 🏢</title>
-  </head>
-  <style>
-    * {
-      margin: 0px;
-      padding: 0px;
-      color: #001b74;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    *{ margin: 0px;
+        padding: 0px;
+        text-decoration: none;
     }
-    #logo {
-      width: 70px;
+    .main{
+        background-image: url("ph.jpg");
+        width: 100vw;
+        height: 80vh;
+        background-position: 80%;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0px 10px 0px 10px;
-      background-color: #306dae76;
-      backdrop-filter: blur(10px);
-      height: 10vh;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 7px;
-    }
-    .btn {
-      padding: 7px 10px 7px 10px;
-      background-color: #000000;
-      border-radius: 3px 10px;
-      text-decoration: none;
-      color: aliceblue;
-      padding: 10px 15px;
-    }
-    .body {
-      height: 100vh;
-      background-color: rgb(255, 255, 255);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      font-size: 20px;
-      font-weight: bold;
-      position: relative;
-    }
-    .cont-1 {
-      border-width: 2px;
-      border-style: solid;
-      border-radius: 7px;
-      border-color: black;
-      padding: 5px 10px;
-      display:flex;
-      gap: 5px;
-      text-align: center;
-      justify-content: center;
-    }
-    .cont-2 {
-      font-weight: 900;
-      font-size: 40px;
-      text-align: center;
-      /* font-size: xx-large; */
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-    }
-    .cont-3{
-        font-size:large;
-        font-weight: 40px;
-    }
-    .options{
-        max-width:80vw ;
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+(max-width: 768px) {
+    .container {
         padding: 10px;
-        border-radius: 7px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        align-content: center;
-        justify-content:space-around;
-        flex-wrap: wrap;
-        gap:8px;
-        
     }
-    .container{
-        background-color: rgb(255, 255, 255);
-        padding: 30px 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-        border-radius: 7px;
-        border: #c1c1c1;
-        /* box-sizing: 0.5px; */
-        /* border-style: solid; */
-        box-shadow: 0 4px 8px 0 rgba(131, 131, 131, 0.436), 0 6px 20px 0 rgba(196, 196, 196, 0.596);
-    }
-    #image{
-        border-radius: 7px;
-    }
-    .location{
-        font-size: larger;
-        margin: 10px 0px;
-    }
-    .contact-number{
-        font-size:large;
-        font-weight: 100;
-        margin: ;
-    }
-    .btn-location{
-        border-style: solid;
-        text-align: center;
-        box-sizing: 2px;
-        padding: 10px;
-        border-radius: 7px;
-        cursor:url("./noun-cursor-2062720.svg"), auto;
-    }
-    .btn-location:hover{
-        border: none;
-        background-color: #dbdbdb;
-        /* transition-delay:4s; */
-    }
-    .contact-email{
-        font-size:large;
-        font-weight: 200;
-    }
-    th{
-        color: rgb(255, 255, 255);
-    }
-    .gray-cover{
-        width: 100%;
-        height: 50%;
-        position:absolute;
-        background-color: #bcbcbc;
-        bottom: 0;
-        border-radius: 0px 0px 10px 10px;
-    }
-    .elements{
-        max-width:80vw ;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        align-content: center;
-        justify-content:space-around;
-        flex-wrap: wrap;
-        gap:8px;
-        z-index: 1;
-    }
-  </style>
-  <body>
-    <section class="header">
-      <img id="logo" src="logo image.png" />
+}
 
-      <div class="nav-links">
-        <a class="btn" href="index.html">Home</a>
-        <a href="#" class="btn">About Us</a>
-        <a href="#" class="btn">Contact Us</a>
-        <a href="#" class="btn">Blog</a>
-      </div>
-    </section>
-
-    <section class="body">
-      <div class="cont-1">
-        <img src="./icon.svg" alt="" width="20px" srcset="" />
-        <div>Contact Page</div>
-      </div>
-      <div class="cont-2">Get in Touch with us for more information</div>
-      <div
-      class="cont-3">if you need help or have a question , we are here for you</div>
-      <div class="options">
-       
-
-      <div class="options">
-        
-        <div
-        
-        class="elements">
-            <div class="container">
-                <img src="./pic 2.jpg" width="300px" sizes="" srcset="" id="image" />
-                <div class="location">Paris</div>
-                <hr>
-                <div class="contact-email">lakfjlkj@gmail.com</div>
-                <div class="contact-number">(415)931-1616</div>
-                <a href="location.html"><div class="btn-location">View Location</div></a>
-              </div>
-              
-              <div class="container">
-                  <img src="./pic4.jpg" width="300px" sizes="" srcset="" id="image" />
-                  <div class="location">Dubai</div>
-                  <hr>
-                  <div class="contact-email">lakfjlkj@gmail.com</div>
-                  <div class="contact-number">(415)931-1616</div>
-                  <div class="btn-location">View Location</div>
-                </div>
-      
-                <div class="container">
-                  <img src="./pic3.jpeg" width="300px" sizes="" srcset="" id="image" />
-                  <div class="location"></div>
-                  <hr>
-                  <div class="contact-email">lakfjlkj@gmail.com</div>
-                  <div class="contact-number">(415)931-1616</div>
-                  <div class="btn-location">View Location</div>
-                </div>
-        </div>
-        <div 
-        class="gray-cover">
-        </div>
-        
-      </div>
-      
-    </section>
-  </body>
+</style>
+<body>
+    <div class="main"></div> 
+    <div class="container">
+        <h2>Hotel Booking</h2>
+        <form id="checkin-form">
+            <div class="form-group">
+                <label for="booking-id">First Name:</label>
+                <input type="text" id="first-name" name="first-n" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="check-in-date">Check-in Date:</label>
+                <input type="date" id="check-in-date" name="check-in-date" required>
+            </div>
+            <div class="form-group">
+                <label for="check-out-date">Check-out Date:</label>
+                <input type="date" id="check-out-date" name="check-out-date" required>
+            </div>
+            <div class="form-group">
+                <label for="room-type">Room Type:</label>
+                <select id="room-type" name="room-type">
+                    <option value="single">Single Room</option>
+                    <option value="double">Double Room</option>
+                    <option value="suite">Suite</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="guest-name">Guest Name:</label>
+                <input type="text" id="guest-name" name="guest-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="special-requests">Special Requests:</label>
+                <textarea id="special-requests" name="special-requests" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I agree to the terms and conditions
+                </label>
+            </div>
+            <button type="submit">Booking Confirm</button>
+        </form>
+    </div>
+</body>
 </html>
